@@ -5,6 +5,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <meta charset="utf-8">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+    <script src="galleria-1.6.1/dist/galleria.min.js"></script>
 </head>
 
 <body class="page">
@@ -28,6 +30,143 @@
     </nav>
 
     <script src="app.js"></script>
+   
+    <style>
+        .galleria{ width: 350px; height: 240px; background: #000 }
+    </style>
+
+    <div class="projects">
+        <div class="unity"> <h4 class="titleSize2">- Unity3D Projects -</h4></div>
+        <div class="entry" id="fate">
+            <div class="project-title">
+                <h4 class="titleSize">Fate Escape</h4>
+                <p class="dateSize">(April 2021)</p>
+            </div>
+         
+            <div class="contents">
+                <div class="galleria test">
+                    <img src="images/fate1.gif">
+                    <img src="images/fate2.jpg">
+                    <img src="images/fate3.jpg">
+                </div>
+
+                <div class="project-text"><p>
+                    Roles: Sole Programmer, Sole Game Designer<br>
+                    Download: <a href="https://hardwin.itch.io/fate-escape">https://hardwin.itch.io/fate-escape</a><br><br>
+                    
+                    This a small endless action game I made for a game jam. The core gameplay idea was to often have the player quickly make
+                    series of choices in a short time frame to get out of situations where they feel tense. Some things I programmed include:
+                    <br>- Using rigidbodies and colliders to detect collision 
+                    <br>- Designing an abstract data structure for the player and enemies
+                    <br>- Repeatedly instantiating random enemies after a set interval of time
+                    <br><br> The main lesson I learned was to make sure I'm using Unity's provided components rather than re-implementing
+                    them myself.
+                </p></div>
+            </div>
+        </div>
+
+        <div class="entry" id="slime">
+            <div class="project-title">
+                <h4 class="titleSize">Slime Escape Mobile</h4>
+                <p class="dateSize">(January 2021 - April 2021)</p>
+            </div>
+         
+            <div class="contents">
+                <div class="project-text2"><p>
+                    Roles: Sole Programmer, Game Designer<br>
+                    Desktop Download: <a href="https://iamcatbone.itch.io/slime-escape">https://iamcatbone.itch.io/slime-escape</a><br><br>
+                    
+                    A desktop puzzle game that was later revised and expanded for a mobile release. The gameplay consists of 
+                    using power-ups in the correct order to traverse towards the goal of the level.
+                    Some things I worked on include:
+                    <br>- Setting up responsive UI and camera bounds
+                    <br>- Implementing mobile video and banner ads that appear in game
+                    <br>- Making prefabs of every type of object to allow for rapid level production 
+                    <br>- Gameplay mechanics for each power-up, including tossing rocks at different angles 
+                </p></div>
+
+                <div class="galleria test">
+                    <img src="images/slime1.gif">
+                    <img src="images/slime2.png">
+                    <img src="images/slime3.png">
+                    <img src="images/slime4.png">
+                    <img src="images/slime5.png">
+                </div>
+            </div>
+        </div>
+
+        <div class="entry" id="glitch">
+            <div class="project-title">
+                <h4 class="titleSize">Glitch Escape</h4>
+                <p class="dateSize">(January 2020 - June 2020)</p>
+            </div>
+         
+            <div class="contents">
+                <div class="galleria test">
+                    <img src="images/glitch1.gif">
+                    <img src="images/glitch2.jpg">
+                    <img src="images/glitch3.jpg">
+                    <img src="images/glitch4.jpg">
+                    <img src="images/glitch5.jpg">
+                    <img src="images/glitch6.jpg">
+                </div>
+
+                <div class="project-text"><p>
+                    Roles: UI Programmer<br>
+                    Download: <a href="https://glitchescape.itch.io/glitch-escape">https://glitchescape.itch.io/glitch-escape</a><br><br>
+                    
+                    A 3D puzzle platformer made with a total of 16 college students. There were 6 other programmers that I'd communicate with
+                    on a bi-daily basis to update and connect functions of the game together.
+
+                    I handled the dialouge system and cutscenes of the game, using YarnSpinner to get the text and UI to appear on screen.
+                    <br><br> This project taught me the value in communicating and being transparent with my teammates. During development,
+                    I initially refrained from asking too many questions and struggled to quickly understand code that someone else wrote. I learned
+                    that this ultimately creates unnecessary clogs in the development pipeline.
+                </p></div>
+            </div>
+        </div>
+
+        <div class="entry" id="two">
+            <div class="project-title">
+                <h4 class="titleSize">Two Steps Forward</h4>
+                <p class="dateSize">(July 2019 - June 2020)</p>
+            </div>
+         
+            <div class="contents">
+                <div class="project-text2"><p>
+                    Roles: Sole Developer<br>
+                    Download: <a href="https://hardwin.itch.io/project-ii">https://hardwin.itch.io/project-ii</a><br><br>
+                    
+                    This is a small 2D combat-based action game centered around having to swap between two characters. It consists
+                    of one level that the player has to traverse through and a boss fight.
+                    
+                    Some things I worked on include:
+                    <br>- Designing an abstract data structure for the player and enemies
+                    <br>- Organizing scripts so that almost everything is updated through one script 
+                    <br>- Creating a boss AI that would pick random sets of actions and act based upon it
+                </p></div>
+
+                <div class="galleria test">
+                    <img src="images/two.gif">
+                    <img src="images/two2.jpg">
+                    <img src="images/two3.jpg">
+                </div>
+            </div>
+        </div>
+
+        <div class="empty"></div>
+    </div>
+
+    <script>
+        (function() {
+            Galleria.loadTheme('galleria-1.6.1/src/themes/azur/galleria.azur.js');
+            Galleria.run('.galleria');
+            Galleria.configure({
+                imageCrop: false,
+                transition: 'fade'
+            });
+        }());
+    </script>
 
     <div class="social">
         <div class="social-child">
